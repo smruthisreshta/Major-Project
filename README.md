@@ -1,11 +1,13 @@
-# Major-Project
 # 🔍 AI-Based Digital Evidence Extraction System
 
 ## 📌 Overview
 
-This project focuses on building an AI-powered system for **digital evidence extraction and analysis**. It combines text processing, OCR (Optical Character Recognition), and forensic analysis techniques to identify meaningful insights from digital data such as documents, images, and social media content.
+This project presents a **proof-of-concept AI-based digital evidence extraction system** designed for cybercrime and digital forensic investigations.
 
-The system is designed to assist in **cybercrime investigations, digital forensics, and online safety monitoring** by automating the extraction and classification of relevant information.
+The system demonstrates how investigators can analyze **digital text and image data (tweets, chats, memes, etc.)** to identify harmful, abusive, or suspicious content.
+
+⚠️ **Important Note:**
+Currently, the system operates on benchmark datasets (e.g., cyberbullying tweets) to validate the AI pipeline. In a real-world forensic scenario, the system is intended to analyze **data from a specific suspect’s profile (e.g., exported chats, posts, or messages)**.
 
 ---
 
@@ -53,22 +55,37 @@ The system is designed to assist in **cybercrime investigations, digital forensi
 
 ## 🧪 How It Works
 
-1. **Input Data**
-   Provide text files, images, or datasets.
+### Current Prototype Workflow
 
-2. **Text Extraction**
+1. **Input Dataset**
+   Pre-collected datasets (e.g., tweets, memes) are used for testing.
+
+2. **Text/Image Extraction**
 
    * Direct text processing OR
    * OCR extraction from images
 
 3. **Preprocessing**
-   Cleaning, tokenization, and normalization of text.
+   Cleaning, tokenization, and normalization.
 
 4. **Analysis & Classification**
-   AI models identify patterns, keywords, and relevant entities.
+   AI models detect toxicity, sentiment, and risk levels.
 
-5. **Output Generation**
-   Results are displayed or stored for further investigation.
+5. **Output**
+   Generates overall statistics and risk distribution.
+
+---
+
+### Intended Real-World Workflow
+
+1. Investigator uploads **suspect-specific data** (chat exports, tweets, etc.)
+2. System processes only that individual's data
+3. AI models analyze harmful content and extract entities
+4. Output is a **forensic report linked to that suspect**, including:
+
+   * Number of harmful messages
+   * Severity classification
+   * Extracted names/entities
 
 ---
 
@@ -108,12 +125,23 @@ pip install -r requirements.txt
 
 ---
 
+## ⚠️ Limitations (Current Version)
+
+* No suspect-specific data input (works on bulk datasets)
+* No direct linkage between suspect and victim
+* Uses pre-collected datasets instead of real case data
+* No integration with platforms like WhatsApp or Instagram
+
+---
+
 ## 🔮 Future Enhancements
 
+* Add **case management module** (suspect-based analysis)
+* Support for **chat export formats** (WhatsApp, Instagram, etc.)
 * Real-time social media monitoring
 * Cloud deployment (AWS / Azure)
 * Integration of advanced NLP models (e.g., BERT)
-* Improved sarcasm and sentiment detection
+* Victim–suspect relationship detection using NER
 * Interactive dashboards for visualization
 
 ---
