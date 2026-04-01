@@ -1,0 +1,13 @@
+pandas
+numpy
+nltk
+spacy
+transformers
+torch
+datasets
+pytesseract
+opencv-python
+pillow
+scikit-learn
+reportlab
+streamlit
