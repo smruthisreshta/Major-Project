@@ -92,7 +92,7 @@ Currently, the system operates on benchmark datasets (e.g., cyberbullying tweets
 ## 📥 Installation
 
 ```bash
-git clone https://github.com/your-username/digital-evidence-extraction.git
+git clone https://github.com/smruthisreshta/digital-evidence-extraction.git
 cd digital-evidence-extraction
 pip install -r requirements.txt
 ```
